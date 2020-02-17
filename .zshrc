@@ -92,7 +92,7 @@ alias :q="exit"
 autoload -U compinit
 zstyle ':completion:*' menu select
 zmodload zsh/complist
-compinit
+compinit -d ~/.cache/zsh/zcompdump-$ZSH_VERSION # Separate path for .zcompdump files
 _comp_options+=(globdots)	# Include hidden files.
 
 # vim keys in tab complete menu
